@@ -1,4 +1,5 @@
-const { defineConfig } = require("@vue/cli-service");
+const { defineConfig } = require('@vue/cli-service');
+
 module.exports = defineConfig({
   transpileDependencies: true,
 
@@ -7,4 +8,15 @@ module.exports = defineConfig({
       // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vuetify-loader
     },
   },
+
+  devServer: {
+    client: {
+      overlay: {
+        warnings: false, // Suppress warnings
+        errors: false, // Suppress errors
+      },
+    },
+  },
+
+  // Optional: You can add custom configuration for the Vue CLI here
 });
